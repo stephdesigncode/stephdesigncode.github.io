@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/league-spartan';
+
+@theme {
+  --font-header: "League Spartan Variable", "League Spartan", sans-serif;
+}
+
+h1{
+    font-family: var(--font-header);
+    font-weight: 600;
+    font-size: clamp(32px, 5vw, 64px);
+}
+
+h2 {
+    font-family: var(--font-header);
+    font-weight: 500;
+    font-size: clamp(20px, 3vw, 40px);
+}
