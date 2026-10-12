@@ -2,6 +2,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import OurStory from './pages/OurStory'
 import Travel from './pages/Travel'
@@ -14,10 +15,11 @@ import Gallery from './pages/Gallery'
 function App() {
 
   return (
-    <>
+    <div className="page-container">
     <HashRouter>
       <Navbar />
-      <Routes>
+      <div className="main-content">
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/OurStory" element={<OurStory />} />
         <Route path="/Travel" element={<Travel />} />
@@ -26,8 +28,10 @@ function App() {
         <Route path="/Registry" element={<Registry />} />
         <Route path="/Gallery" element={<Gallery />} />
       </Routes>
+      </div>
     </HashRouter>
-    </>
+    <Footer />
+    </div>
   )
 }
 
